@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>com.bjy.idea.plugin.off</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="com.bjy.idea.plugin.action" displayType="BALLOON" key="notification.group.name"/>
+    </extensions>
+    <actions>
+        <action id="com.bjy.idea.plugin.action" class="com.bjy.idea.plugin.action.MyPlugin" text="MyPlugin">
+            <add-to-group group-id="HelpMenu" anchor="after" relative-to-action="About"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt A"/>
+        </action>
+    </actions>
+</idea-plugin>
